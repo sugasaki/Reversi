@@ -1,0 +1,35 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             x:Class="ReversiMetro.App" >
+
+
+    <Application.Resources>
+
+
+        <ItemsPanelTemplate x:Key="SnapListItemsPanelTemplate">
+            <WrapGrid Margin="0,0,0,0"  ></WrapGrid>
+            
+        </ItemsPanelTemplate>
+        
+        
+        <!--<DataTemplate x:Key="SnapListItemTemplate">
+            <Grid HorizontalAlignment="Left" Width="290" Height="60">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Style="{StaticResource ImagePlaceHolderStyle}" Margin="8,8,0,8" Width="44" Height="44" HorizontalAlignment="Left" VerticalAlignment="Top">
+          <Image Source="{Binding Image}" Margin="0" Stretch="UniformToFill"/>
+        </Border>
+        <StackPanel Grid.Column="1" Style="{StaticResource MoCoContentTextStackPanelStyle}" HorizontalAlignment="Left" Margin="12,6,0,0">
+          <TextBlock TextWrapping="Wrap" Text="{Binding Title}" Style="{StaticResource NonWrappingSmallContentTextStyle}" Width="200" Height="20"/>
+          <TextBlock TextWrapping="Wrap" TextTrimming="WordEllipsis" Text="{Binding Subtitle}" Style="{StaticResource SubHeaderTextStyle}" Width="200" Height="20" Margin="0,0,0,0"/>
+        </StackPanel>
+      </Grid>
+    </DataTemplate>-->
+        
+        
+    </Application.Resources>
+
+
+</Application>

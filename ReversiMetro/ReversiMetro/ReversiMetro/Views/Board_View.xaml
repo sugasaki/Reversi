@@ -1,0 +1,44 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:ReversiMetro.Views" x:Class="ReversiMetro.Views.Board_View"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400"
+    >
+
+
+
+    <UserControl.Resources>
+        <CollectionViewSource x:Name="GroupedCollectionViewSource" x:Key="GroupedCollectionViewSource" />
+
+        <ItemsPanelTemplate x:Key="GridItemsPanelTemplate">
+            <StackPanel Orientation="Horizontal" Margin="120,0,0,0" />
+        </ItemsPanelTemplate>
+    </UserControl.Resources>
+
+    
+    
+    <Grid x:Name="LayoutRoot" Background="#FF0C0C0C">
+        <Image Source="/Images/Game-Board-8x8.png"/>
+
+        <ListView ItemsSource="{Binding SquareList}" SelectionMode="Single" 
+              SelectionChanged="ListView_SelectionChanged"
+              ItemsPanel="{StaticResource SnapListItemsPanelTemplate}"
+              >
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="120" Height="120" >
+                        <local:Square_View Margin="5" />
+                        <Border Background="Red" Opacity="0.01" Tapped="Border_Tapped"></Border>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+
+    </Grid>
+</UserControl>

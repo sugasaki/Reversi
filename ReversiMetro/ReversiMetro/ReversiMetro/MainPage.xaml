@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="ReversiMetro.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ReversiMetro_Views="using:ReversiMetro.Views"
+    xmlns:ReversiMetro_ViewModels="using:ReversiMetro.ViewModels"
+    mc:Ignorable="d"
+    d:DesignHeight="768" d:DesignWidth="1366">
+
+    <!--<UserControl.DataContext>
+        <ReversiMetro_ViewModels:MainWindow_ViewModel />
+    </UserControl.DataContext>-->
+    
+    
+    <Grid x:Name="LayoutRoot" Background="#FF0C0C0C">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" >
+            <Button Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" />
+            <Button Content="Pass" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
+            <Button Content="Undo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Margin="5">
+            <Viewbox Stretch="Uniform">
+            <ReversiMetro_Views:Board_View DataContext="{Binding Path=Board_ViewModel}" />
+            </Viewbox>
+        </Grid>
+
+    </Grid>
+
+</UserControl>

@@ -1,0 +1,77 @@
+#
+#	Thell Message Catalog file
+#	[default, non-SSTP messages]
+#
+#	2001/07/18 Seal Software <sealsoft@mocha.freemail.ne.jp>
+#
+#
+#
+#	1つのエントリにつき複数の値を持つことができます。
+#	例えば、
+#
+#	talk	強いですねぇ。
+#	talk	いい手がないなぁ。
+#	talk	これはいい手だ！
+#
+#	1つがランダムに選ばれます。特定のセリフの出現確率を高く
+#	したければ、
+#
+#	talk	強いですねぇ。
+#	talk	強いですねぇ。
+#
+#	のように同じ物を複数書いて下さい。
+#
+
+youwillwin    あなたの[param]石勝ち見込み。
+iwillwin      私の[param]石勝ち見込み！
+gamewilldraw  引き分けになる見込み。
+
+# talk-worst	最悪の評価値の時
+talk-worst  い、いかん、このままでは!!
+talk-worst  やばいっ！
+talk-worst  強すぎますよー。
+talk-worst  ひーっ！
+talk-worst  ………。
+talk-worst  ………。
+talk-worst  ………。
+talk-worst  ………。
+
+# talk-worse	劣勢の評価値の時
+talk-worse  ちょっとやばいかも…。
+talk-worse  うーむ……。
+talk-worse  く……。
+talk-worse  強いですねぇ…。
+talk-worse  いい手がないなぁ。
+talk-worse  お手柔らかにお願いしますよ。
+
+# talk	互角の評価値の時
+talk        うーむ。そう来ますか。
+talk        互角ですね。
+talk        いい勝負ですね。
+talk        先が読めませんね。
+talk        わからないなぁ。
+talk        これはこうかな？
+talk        これでどうだ！
+talk        まだわかりませんね。
+
+# talk-better	優勢の評価値の時
+talk-better いい調子だ！
+talk-better よし、この調子！
+talk-better 勝てるかな？
+talk-better お、勝てそうかな？
+talk-better おやおや…。
+talk-better これはいい手だ！
+talk-better これはいい手だ！
+talk-better ここだ！
+
+# talk-best	最高の評価値の時
+talk-best   余裕～。
+talk-best   まだまだですね。
+talk-best   ちゃんと考えてます？
+talk-best   ちゃんと考えてますか？
+talk-best   頭使ってますか？
+talk-best   本気なんですか？
+talk-best   そろそろ本気出してくださいよー。
+talk-best   馬鹿にしてるんですか。
+talk-best   ナメてるんですか。
+

@@ -1,0 +1,38 @@
+﻿<Window xmlns:my="clr-namespace:Reversi.Views"  x:Class="Reversi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="550" Width="625"
+        xmlns:ViewModel="clr-namespace:Reversi.ViewModels"  
+        xmlns:Views="clr-namespace:Reversi.Views"  
+        >
+    
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="29" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <Image Source="/Reversi;component/Assets/res/Game-Board-8x8-grid%28Light,Dark%29%28Chess,Checkers,Reversi%29.gif"
+            Grid.RowSpan="3" Stretch="UniformToFill" />
+
+
+        <StackPanel Orientation="Horizontal" Margin="10,5,0,5">
+            <Button Content="ゲーム開始" Height="23" Width="75"  Command="{Binding startCMD}" />
+            <Button Content="パス" Height="23" Width="75" Command="{Binding passCMD}" Margin="10,0,0,0" />
+            <Button Content="UNDO" Height="23" Width="75" Command="{Binding undoCMD}" Margin="10,0,0,0" />
+        </StackPanel>
+
+        
+        <Grid x:Name="Grid1" Grid.Row="2" Margin="5">
+            <Viewbox Stretch="Uniform">
+                <my:Board_View DataContext="{Binding Path=Board_ViewModel}" />
+            </Viewbox>
+        </Grid>
+
+
+    </Grid>
+</Window>
