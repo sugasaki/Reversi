@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="Reversi.ViewModels.Board_View_Back"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:Views="clr-namespace:Reversi.Views"  
+             xmlns:ViewModel="clr-namespace:Reversi.ViewModels"  
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style x:Key="WrapListBox" TargetType="ListBox">
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBox">
+                        <Grid>
+                            <Border BorderBrush="#FF000000" BorderThickness="1" CornerRadius="3">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="#333333" BorderThickness="2" CornerRadius="3">
+                                    <ItemsPresenter />
+                                </Border>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Setter Property="ItemTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Views:Square_View Width="20" Height="20" />
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Background="#FF00B900">
+
+        <ListBox x:Name="Swatch" ItemsSource="{Binding SquareList}" Margin="10" Style="{StaticResource WrapListBox}">
+        </ListBox>
+
+
+    </Grid>
+</UserControl>

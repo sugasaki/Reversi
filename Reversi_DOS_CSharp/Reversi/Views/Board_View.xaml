@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="Reversi.Views.Board_View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:Views="clr-namespace:Reversi.Views"  
+             xmlns:ViewModel="clr-namespace:Reversi.ViewModels"  
+             d:DesignHeight="300" d:DesignWidth="300"
+             >
+
+
+    <Grid >
+        <Image Source="/Reversi;component/Assets/res/Game-Board-8x8.png" />
+        <ListView ItemsSource="{Binding SquareList}" 
+                SelectionMode="Single" SelectionChanged="ListView_SelectionChanged">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="120" Height="120" >
+                        <Views:Square_View Margin="5" />
+                        <Border MouseDown="Square_View_MouseDown" Background="Red" Opacity="0.01"></Border>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+
+
+            <ListView.Template>
+                <ControlTemplate TargetType="{x:Type ListView}">
+                    <UniformGrid Columns="{Binding BOARD_SIZE}" Rows="{Binding BOARD_SIZE}" IsItemsHost="True"></UniformGrid>
+                </ControlTemplate>
+            </ListView.Template>
+
+        </ListView>
+
+    </Grid>
+
+</UserControl>
